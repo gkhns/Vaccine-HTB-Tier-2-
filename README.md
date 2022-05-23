@@ -130,3 +130,15 @@ We can now capture the user flag!
 
 ![image](https://user-images.githubusercontent.com/99097743/169892144-9a64989d-8b83-482a-8989-72c3c4080914.png)
 
+**Privilege Escalation**
+
+We are trying privilege Escalation By using SUID. Let's start with this command:
+
+```sh
+find / -perm -4000 -type f 2>/dev/null
+```
+*/ denotes that we will start from the top (root) of the file system and find every directory
+* -perm denotes that we will search for the permissions that follow:
+* -type states the type of file we are looking for
+* f denotes a regular file, excluding directories and special files
+* 2>/dev/null means we will redirect all errors to /dev/null. In other words, we will ignore all errors.
