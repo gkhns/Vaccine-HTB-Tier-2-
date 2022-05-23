@@ -64,3 +64,13 @@ Using the credentials we can log in to the Car Catalogue
 
 
 **SQL Injection**
+
+* If you try a single quote (') inside the search box --> ERROR: unterminated quoted string at or near "'" LINE 1: Select * from cars where name ilike '%'%' ^
+* If you try ' OR '1' = '1  --> No ERROR message: brings all cars as 1=1 always!
+
+
+Let's use the **sqlmap** for this lab. 
+
+https://github.com/sqlmapproject/sqlmap.git
+
+Automatic SQL injection and database takeover tool
