@@ -143,3 +143,25 @@ find / -perm -4000 -type f 2>/dev/null
 * -type states the type of file we are looking for
 * f denotes a regular file, excluding directories and special files
 * 2>/dev/null means we will redirect all errors to /dev/null. In other words, we will ignore all errors.
+
+**My shell dies after around 15 secs. I need to find a way (if there is any) to make it more stable.**
+
+**SSH Login**
+
+```sh
+ssh postgres@{IP}
+```
+
+```sh
+sudo -l
+#This command shows what priviliges we have
+
+
+```
+![image](https://user-images.githubusercontent.com/99097743/169922058-3c2726ef-1d10-4ef2-802b-a762a960e19f.png)
+
+We can run binaries but we need to use GTFObins to bypass restrictions to run binaries
+
+https://gtfobins.github.io/
+
+
