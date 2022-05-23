@@ -128,4 +128,5 @@ It worked!
 
 We can now capture the user flag!
 
-![image](https://user-images.githubusercontent.com/99097743/169891271-24ed9ae1-def0-48b2-b89f-c0c244f61f64.png)
+![image](https://user-images.githubusercontent.com/99097743/169892144-9a64989d-8b83-482a-8989-72c3c4080914.png)
+
