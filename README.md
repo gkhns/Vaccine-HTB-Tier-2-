@@ -136,7 +136,7 @@ We are trying privilege escalation By using SUID. Let's start with this command:
 ```sh
 find / -perm -4000 -type f 2>/dev/null
 ```
-*/ denotes that we will start from the top (root) of the file system and find every directory
+* / denotes that we will start from the top (root) of the file system and find every directory
 * -perm denotes that we will search for the permissions that follow:
 * -type states the type of file we are looking for
 * f denotes a regular file, excluding directories and special files
