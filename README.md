@@ -12,11 +12,9 @@
 
 Open Ports
 
-21/tcp open  ftp     vsftpd 3.0.3
-
-22/tcp open  ssh     OpenSSH 8.0p1 Ubuntu 6ubuntu0.1 (Ubuntu Linux; protocol 2.0)
-
-80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+* 21/tcp open  ftp     vsftpd 3.0.3
+* 22/tcp open  ssh     OpenSSH 8.0p1 Ubuntu 6ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+* 80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
 
 ![image](https://user-images.githubusercontent.com/99097743/169863478-0bfbc6c9-0ec3-49bf-a48e-13fdbe28576a.png)
 
